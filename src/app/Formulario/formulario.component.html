@@ -1,0 +1,105 @@
+<div>
+
+  <h2 class="font-black text-3xl text-center">Seguimiento Pacientes</h2>
+
+  <p class="text-lg mt-5 mb-10 text-center">
+    Añade pacientes y
+    <span class="text-indigo-600 font-bold">Administrarlos</span>
+  </p>
+
+
+
+  <form [formGroup]="pacienteForm" class="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+
+<!-- Nombre de la Mascota   -->
+    <div class="mb-5">
+
+      <label for="namePet" class="block text-gray-700 uppercase font-bold">
+        Nombre Mascota
+      </label>
+
+      <input
+        id="namePet"
+        type="text"
+        formControlName="namePet"
+        placeholder="Nombre de la Mascota"
+        class="w-full border-2 p-2 mt-2 placeholder-gray-400 rounded-md"
+      >
+
+    </div>
+
+<!-- Nombre del Propietario   -->
+    <div class="mb-5">
+
+      <label for="nameOwner" class="block text-gray-700 uppercase font-bold">
+        Nombre del Propietario
+      </label>
+
+      <input
+        id="nameOwner"
+        type="text"
+        formControlName="nameOwner"
+        placeholder="Nombre del Propietario"
+        class="w-full border-2 p-2 mt-2 placeholder-gray-400 rounded-md"
+      >
+
+    </div>
+
+<!-- Email de Contacto   -->
+    <div class="mb-5">
+
+      <label for="email" class="block text-gray-700 uppercase font-bold">
+        Email
+      </label>
+
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Email de Contacto"
+        class="w-full border-2 p-2 mt-2 placeholder-gray-400 rounded-md"
+      >
+    </div>
+
+<!-- Fecha de Alta   -->
+    <div class="mb-5">
+      <label for="date" class="block text-gray-700 uppercase font-bold">
+        Fecha de Alta
+      </label>
+
+      <input
+        id="date"
+        type="date"
+        formControlName="date"
+        class="w-full border-2 p-2 mt-2 rounded-md"
+      >
+    </div>
+
+<!-- Sintomas de la Mascota   -->
+    <div class="mb-5">
+      <label for="sintomas" class="block font-bold text-gray-700 uppercase">
+        Sintomas
+      </label>
+
+      <textarea
+        id="sintomas"
+        placeholder="Sintomas"
+        formControlName="sintomas"
+        class="w-full border-2 p-2 mt-2 rounded-md placeholder-gray-400 resize-none"></textarea>
+    </div>
+
+    <!-- Mensaje de error en caso de que el formulario sea invalido -->
+    <div
+      *ngIf="errorFlag"
+      class="bg-gradient-to-r from-red-800 to-red-600 text-white font-bold uppercase text-center p-3 mb-3 rounded"
+    >
+      <p>Todos los campos son obligatorios</p>
+    </div>
+
+    <button
+      (click)="onSubmit()"
+      class="w-full border-2 p-3 rounded-md bg-indigo-600 font-bold text-white uppercase hover:bg-indigo-700 cursor-pointer transition-all"
+    >Agregar Paciente</button>
+
+  </form>
+</div>

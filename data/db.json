@@ -1,0 +1,28 @@
+{
+  "pacientes": [
+    {
+      "namePet": "Hook",
+      "nameOwner": "Araceli",
+      "email": "email@email.com",
+      "date": "2023-01-01",
+      "sintomas": "Solo duerme",
+      "id": "aqxh7uugudflnp3n0wq"
+    },
+    {
+      "namePet": "Chamy",
+      "nameOwner": "Araceli",
+      "email": "correo@correo.com",
+      "date": "2023-11-02",
+      "sintomas": "1",
+      "id": "lyf7624ihejlntccfep"
+    },
+    {
+      "namePet": "Chamy",
+      "nameOwner": "Araceli",
+      "email": "correo@correo.com",
+      "date": "2023-10-04",
+      "sintomas": "2",
+      "id": "as3aw2ykudulntci482"
+    }
+  ]
+}
